@@ -31,7 +31,7 @@ wp --info
 cd /var/www/html
 wp core download --allow-root
 #wp config create --dbname=zippyopsdb --dbuser=zippyops --dbpass=zippyops --locale=ro_RO --allow-root
-cp /root/wp-config/wp-config.php /var/www/html/
+cp /home/ec2-user/wp-config/wp-config.php /var/www/html/
 ip=$(dig +short myip.opendns.com @resolver1.opendns.com)
 wp core install --url=$ip --title=zippyops --admin_user=zippyops --admin_password=zippyops --admin_email=admin@zippyops.com --allow-root
 sudo chown -R apache /var/www/html
